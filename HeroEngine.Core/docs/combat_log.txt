@@ -1,0 +1,25 @@
+==================================================
+          BATTLE START: HEROES VS BUGS
+==================================================
+Boss attacks manolo! Takes 30 damage.
+manolo attacks Minion! Takes 30 damage.
+Minion is DEFEATED!
+Elite attacks manolo! Takes 5 damage.
+Boss attacks manolo! Takes 30 damage.
+manolo attacks Elite! Takes 30 damage.
+Elite attacks manolo! Takes 5 damage.
+Boss attacks manolo! Takes 30 damage.
+manolo attacks Elite! Takes 30 damage.
+Elite attacks manolo! Takes 5 damage.
+Boss attacks manolo! Takes 30 damage.
+manolo attacks Elite! Takes 30 damage.
+Elite is DEFEATED!
+Boss attacks manolo! Takes 30 damage.
+manolo is DEFEATED!
+
+            --- COMBAT STATISTICS ---
+            Total Damage Dealt: 365
+            Most Effective Combatant: Boss (200 dmg)
+            Fastest Defeat: Minion (in 1 turns)
+            -------------------------
+DEFEAT
