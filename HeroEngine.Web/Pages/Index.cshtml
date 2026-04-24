@@ -1,10 +1,47 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Game Index";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="text-center mb-5">
+    <h1 class="display-4">Bytecroft's Tabern'</h1>
+    <p class="lead">Welcome to the Hero Engine.</p>
+</div>
+
+<div class="row text-center">
+    <div class="col-md-6 mb-4">
+        <div class="card shadow-sm h-100">
+            <div class="card-body">
+                <h5 class="card-title">Héroes Registrados</h5>
+                <h2 class="display-1 text-primary">@Model.TotalHeroes</h2>
+                
+                <a asp-page="/Heroes/Index" class="btn btn-outline-primary mt-3">See full list.</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 mb-4">
+        <div class="card shadow-sm h-100">
+            <div class="card-body">
+                <h5 class="card-title">Last registered Heroes</h5>
+                @if (Model.TotalHeroes == 0)
+                {
+                    <p class="text-muted mt-4">No heroes on the Tabern yet... :(</p>
+                }
+                else
+                {
+                    <ul class="list-group list-group-flush text-start mt-3">
+                        @foreach (var hero in Model.RecentHeroes)
+                        {
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <strong>@hero.Name</strong>
+                                <span class="badge bg-secondary rounded-pill">Lvl @hero.Level</span>
+                            </li>
+                        }
+                    </ul>
+                }
+            </div>
+        </div>
+    </div>
 </div>
