@@ -111,5 +111,13 @@ namespace HeroEngine.UI
         {
             public const string LogPath = "../../../docs/combat_log.txt";
         }
+        public static class Exceptions
+        {
+            public const string KeyNotFoundException = "Cannot find the hero with the name '{0}' to delete.";
+            public const string EmptyPathException = "The file path cannot be empty.";
+            public const string ErrorReadingJson = "Error reading JSON: {0}";
+            public const string HeroAlreadyExists = "A hero with the name '{0}' already exists.";
+            public const string ErrorEmptyName = "Name cannot be empty.";
+        }
     }
 }

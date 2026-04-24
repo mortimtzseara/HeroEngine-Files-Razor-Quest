@@ -1,7 +1,13 @@
+using HeroEngine.Core.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+
+string dataPath = builder.Configuration.GetValue<string>("DataPath") ?? "heroes.json";
+
+builder.Services.AddSingleton<HeroRepository>(new HeroRepository(dataPath));
 
 var app = builder.Build();
 

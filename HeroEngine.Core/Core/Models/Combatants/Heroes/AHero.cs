@@ -1,12 +1,18 @@
 ﻿using HeroEngine.Core.Models.Combatants;
 using HeroEngine.UI;
 using System.Text;
+using System.Text.Json.Serialization;
 
 namespace HeroEngine.Core.Models.Combatants.Heroes
 {
     /// <summary>
     /// Represents an abstract base class for hero combatants with level-based attributes.
     /// </summary>
+    [JsonPolymorphic(TypeDiscriminatorPropertyName = "type")]
+
+    [JsonDerivedType(typeof(Warrior), typeDiscriminator: "Warrior")]
+    [JsonDerivedType(typeof(Mage), typeDiscriminator: "Mage")]
+    [JsonDerivedType(typeof(Rogue), typeDiscriminator: "Rogue")]
     public abstract class AHero: ACombatant
     {
         public int Level { get; protected set; }
