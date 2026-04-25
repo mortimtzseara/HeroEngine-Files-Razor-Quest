@@ -18,6 +18,10 @@ namespace HeroEngine.Core.Logic
         private readonly Dictionary<ACombatant, int> RoundsToDefeat = new Dictionary<ACombatant, int>();
         private int TotalTurns = 0;
         private readonly int CombatantsCount;
+        public List<string> HeroNames { get; set; }
+        public List<string> EnemyNames { get; set; }
+        public string Outcome { get; set; }
+        public DateTime CombatDate { get; private set; } = DateTime.Now;
 
         public CombatStats(int combatantsCount)
         {
@@ -55,6 +59,27 @@ namespace HeroEngine.Core.Logic
             var fastestDefeat = RoundsToDefeat.OrderBy(x => x.Value).FirstOrDefault();
 
             return string.Format(UIConfig.Messages.CombatSummaryTemplate, TotalDamageDealt, mostEffective.Key.Name, mostEffective.Value, fastestDefeat.Key.Name, fastestDefeat.Value);
+        }
+        /// <summary>
+        /// Generates a CSV-formatted line representing the combat summary, including combat date, hero and enemy names,
+        /// outcome, total rounds, total damage dealt, and the most effective combatant.
+        /// </summary>
+        /// <returns>A string containing the combat summary in CSV format, with fields separated by commas and lists separated by
+        /// semicolons.</returns>
+        public string ToCsvLine()
+        {
+            var mostEffective = DamagePerCombatant.OrderByDescending(x => x.Value).FirstOrDefault();
+            int totalRounds = (TotalTurns - 1) / CombatantsCount + 1;
+
+            return string.Format("{0},{1},{2},{3},{4},{5},{6},{7}",
+                CombatDate,
+                string.Join(";", HeroNames),
+                string.Join(";", EnemyNames),
+                Outcome,
+                totalRounds,
+                TotalDamageDealt,
+                mostEffective.Key?.Name ?? "N/A",
+                Environment.NewLine);
         }
     }
 }

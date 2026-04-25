@@ -1,7 +1,5 @@
 ﻿using HeroEngine.Core.Models.Combatants;
 using HeroEngine.UI;
-using System.Collections.Generic;
-using System.IO;
 using System.Text;
 
 
@@ -25,6 +23,8 @@ namespace HeroEngine.Core.Logic
             BattleLog = new StringBuilder();
             Queue = Heroes.Concat(Enemies).OrderByDescending(combatant => combatant.Initiative).ToList();
             Stats = new CombatStats(Queue.Count);
+            Stats.HeroNames = Heroes.Select(h => h.Name).ToList();
+            Stats.EnemyNames = Enemies.Select(e => e.Name).ToList();
         }
 
         /// <summary>
@@ -32,8 +32,7 @@ namespace HeroEngine.Core.Logic
         /// </summary>
         public void RunBattle()
         {
-            BattleLog.AppendLine(UIConfig.Decoration.BattleTitle);
-            Console.WriteLine(UIConfig.Decoration.BattleTitle);
+            BattleLog.AppendLine(UIConfig.Messages.LogHeader);
 
             while (Heroes.Any(h => !h.IsDefeated) && Enemies.Any(e => !e.IsDefeated))
             {
@@ -51,26 +50,21 @@ namespace HeroEngine.Core.Logic
 
                         Stats.RegisterAction(participant, target, damageDealt);
 
-                        Console.WriteLine(turnResult);
                         BattleLog.AppendLine(turnResult);
 
                         if (target.IsDefeated)
                         {
                             string defeatedMessage = string.Format(UIConfig.Messages.MessageDefeated, target.Name);
-                            Console.WriteLine(defeatedMessage);
                             BattleLog.AppendLine(defeatedMessage);
                         }
 
                         Queue.Add(participant);
-                        Thread.Sleep(500);
 
                     }
                 }
             }
-            string finalStats = Stats.GetSummary();
 
-            Console.WriteLine(finalStats);
-            BattleLog.AppendLine(finalStats);
+            BattleLog.AppendLine(Stats.GetSummary());
 
             FinalizeBattle();
         }
@@ -81,15 +75,15 @@ namespace HeroEngine.Core.Logic
         private void FinalizeBattle()
         {
             bool heroesWon = Heroes.Any(h => !h.IsDefeated);
-            string result = heroesWon ? UIConfig.Messages.MessageVictory : UIConfig.Messages.MessageDefeat;
-
-            Console.WriteLine(result);
-            BattleLog.AppendLine(result);
+            Stats.Outcome = heroesWon ? UIConfig.Messages.MessageVictory : UIConfig.Messages.MessageDefeat;
+            BattleLog.AppendLine(Stats.Outcome);
+            
             foreach (var p in Heroes.Concat(Enemies))
             {
                 p.ResetStats();
             }
-            File.WriteAllText(UIConfig.Path.LogPath, BattleLog.ToString());
+
+            File.AppendAllText(UIConfig.Path.TxtPath, BattleLog.ToString());
         }
         /// <summary>
         /// Finds the first undefeated enemy combatant in the queue relative to the specified participant.

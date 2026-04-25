@@ -1,0 +1,29 @@
+[
+  {
+    "type": "Mage",
+    "Arcane": 2,
+    "Initiative": 12,
+    "MaxMana": 25,
+    "Mana": 25,
+    "SpellBook": [
+      {
+        "$type": "AttackSpell",
+        "Damage": 15,
+        "Name": "Fireball",
+        "Type": "Attack",
+        "Rarity": "Common",
+        "ManaCost": 10
+      }
+    ],
+    "Level": 1,
+    "Name": "Miau",
+    "MaxHP": 100,
+    "DamageModifier": 0,
+    "ArmorModifier": 0,
+    "TotalArmor": 0,
+    "TotalDamage": 5,
+    "CurrentHP": 100,
+    "IsDefeated": false,
+    "LastDamageDealt": 0
+  }
+]

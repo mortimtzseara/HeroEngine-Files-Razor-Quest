@@ -67,6 +67,7 @@ namespace HeroEngine.UI
                     Fastest Defeat: {3} (in {4} turns)
                     -------------------------
         """;
+            public const string LogHeader = "=== COMBAT LOG {0} ===\n";
         }
         public static class Numeric
         {
@@ -109,7 +110,8 @@ namespace HeroEngine.UI
         }
         public static class Path
         {
-            public const string LogPath = "../../../docs/combat_log.txt";
+            public const string TxtPath = "Data/combat_log.txt";
+            public const string CsvPath = "Data/combat_stats.csv";
         }
         public static class Exceptions
         {
