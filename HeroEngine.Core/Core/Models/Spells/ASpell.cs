@@ -1,12 +1,18 @@
 ﻿using HeroEngine.Core.enums;
 using HeroEngine.Core.Interfaces;
 using HeroEngine.Core.Models.Combatants;
+using System.Text.Json.Serialization;
 
 namespace HeroEngine.Core.Models.Spells
 {
     /// <summary>
     /// Represents an abstract magical ability with a name, type, rarity, and mana cost.
     /// </summary>
+    
+    [JsonDerivedType(typeof(AttackSpell), typeDiscriminator: "AttackSpell")]
+    [JsonDerivedType(typeof(DefenseSpell), typeDiscriminator: "DefenseSpell")]
+    [JsonDerivedType(typeof(HealingSpell), typeDiscriminator: "HealingSpell")]
+    [JsonDerivedType(typeof(SupportSpell), typeDiscriminator: "SupportSpell")]
     public abstract class ASpell : IAbility
     {
         public string Name { get; protected set; }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.Json;
+using System.Text.Json.Serialization;
 using HeroEngine.Core.Models.Combatants.Heroes;
 using HeroEngine.UI;
 
@@ -12,6 +13,7 @@ namespace HeroEngine.Core.Data
     public class HeroRepository
     {
         private readonly string _filePath;
+        private readonly JsonSerializerOptions _jsonOptions;
 
         public HeroRepository(string filePath)
         {
@@ -20,6 +22,13 @@ namespace HeroEngine.Core.Data
                 throw new ArgumentException(UIConfig.Exceptions.EmptyPathException, nameof(filePath));
             }
             _filePath = filePath;
+
+            _jsonOptions = new JsonSerializerOptions
+            {
+                WriteIndented = true
+            };
+
+            _jsonOptions.Converters.Add(new JsonStringEnumConverter());
         }
 
         /// <summary>
@@ -39,7 +48,7 @@ namespace HeroEngine.Core.Data
 
             try
             {
-                return JsonSerializer.Deserialize<List<AHero>>(json) ?? new List<AHero>();
+                return JsonSerializer.Deserialize<List<AHero>>(json, _jsonOptions) ?? new List<AHero>();
             }
             catch (JsonException ex)
             {
@@ -64,9 +73,7 @@ namespace HeroEngine.Core.Data
                 throw new ArgumentNullException(nameof(heroes));
             }
 
-            JsonSerializerOptions options = new JsonSerializerOptions { WriteIndented = true };
-
-            string json = JsonSerializer.Serialize(heroes, options);
+            string json = JsonSerializer.Serialize(heroes, _jsonOptions);
 
             File.WriteAllText(_filePath, json);
         }
@@ -109,6 +116,19 @@ namespace HeroEngine.Core.Data
 
             heroes.Remove(heroToRemove);
             SaveAll(heroes);
+        }
+        /// <summary>
+        /// Retrieves a hero whose name matches the specified value, using a case-insensitive comparison.
+        /// </summary>
+        /// <param name="name">The name of the hero to search for. Cannot be null, empty, or consist only of white-space characters.</param>
+        /// <returns>An instance of <see cref="AHero"/> whose <c>Name</c> matches the specified value, or <see langword="null"/>
+        /// if no matching hero is found.</returns>
+        /// <exception cref="ArgumentException">Thrown if <paramref name="name"/> is null, empty, or consists only of white-space characters.</exception>
+        public AHero GetHeroByName(string name)
+        {
+            if (string.IsNullOrWhiteSpace(name)) throw new ArgumentException(string.Format(UIConfig.Exceptions.ErrorEmptyName, nameof(name)));
+            var heroes = LoadAll();
+            return heroes.FirstOrDefault(h => h.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
         }
     }
 }

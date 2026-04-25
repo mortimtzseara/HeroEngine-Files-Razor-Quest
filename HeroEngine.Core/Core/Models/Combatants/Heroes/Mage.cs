@@ -3,6 +3,7 @@ using HeroEngine.Core.Interfaces;
 using HeroEngine.Core.Models.Spells;
 using HeroEngine.UI;
 using System.Text;
+using System.Text.Json.Serialization;
 
 namespace HeroEngine.Core.Models.Combatants.Heroes
 {
@@ -20,7 +21,8 @@ namespace HeroEngine.Core.Models.Combatants.Heroes
             get => _mana;
             protected set => _mana = Math.Clamp(value, 0, MaxMana);
         }
-        public List<IAbility> SpellBook { get; private set; } = new List<IAbility>();
+        [JsonInclude]
+        public List<ASpell> SpellBook { get; private set; } = new List<ASpell>();
         public Mage(string name, int level): base(name, level, UIConfig.Numeric.BaseHP, UIConfig.Numeric.BaseDamage)
         {
             _mana = MaxMana;
@@ -49,7 +51,7 @@ namespace HeroEngine.Core.Models.Combatants.Heroes
         /// Adds a new spell to the spellbook if it has not already been learned.
         /// </summary>
         /// <param name="newSpell">The spell to learn.</param>
-        public void LearnSpell(IAbility newSpell)
+        public void LearnSpell(ASpell newSpell)
         {
             if(SpellBook.Any(spell => spell.Name.Equals(newSpell.Name, StringComparison.OrdinalIgnoreCase)))
             {

@@ -1,0 +1,75 @@
+﻿@page "{name}"
+@model HeroEngine.Web.Pages.Heroes.DetailModel
+@using HeroEngine.Core.Models.Combatants.Heroes
+
+@{
+    ViewData["Title"] = "Details of " + Model.Hero.Name;
+}
+
+<div class="card shadow">
+    <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
+        <h2 class="mb-0">Hero Profile: @Model.Hero.Name</h2>
+        <span class="badge bg-light text-dark fs-6">Class: @Model.Hero.GetType().Name</span>
+    </div>
+    
+    <div class="card-body">
+        <div class="row text-center mb-4">
+            <div class="col-md-4">
+                <h4 class="text-muted">Level</h4>
+                <p class="fs-1 fw-bold text-primary">@Model.Hero.Level</p>
+            </div>
+            <div class="col-md-4">
+                <h4 class="text-muted">Max Health</h4>
+                <p class="fs-1 fw-bold text-danger">@Model.Hero.MaxHP HP</p>
+            </div>
+        </div>
+        
+        <hr />
+        
+        <div class="mt-4 mb-4">
+            <h4>Current Status</h4>
+            <div class="progress" style="height: 30px;">
+                <div class="progress-bar bg-danger progress-bar-striped" role="progressbar" style="width: 100%; font-size: 1.2rem;">
+                    Health: @Model.Hero.CurrentHP / @Model.Hero.MaxHP
+                </div>
+            </div>
+        </div>
+
+        @if (Model.Hero is Mage mageHero)
+        {
+            <hr />
+            <div class="mt-4">
+                <h4>Spellbook</h4>
+                
+                @if (!mageHero.SpellBook.Any())
+                {
+                    <div class="alert alert-secondary text-center">
+                        This mage has not learned any spells yet.
+                    </div>
+                }
+                else
+                {
+                    <ul class="list-group">
+                        @foreach (var spell in mageHero.SpellBook)
+                        {
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h5 class="mb-0 fw-bold">@spell.Name</h5>
+                                    <small class="text-muted">Type: @spell.Type</small>
+                                </div>
+                                <div class="text-end">
+                                    <span class="badge bg-primary rounded-pill me-2">Cost: @spell.ManaCost MP</span>
+                                    <span class="badge bg-secondary rounded-pill">@spell.Rarity</span>
+                                </div>
+                            </li>
+                        }
+                    </ul>
+                }
+            </div>
+        }
+    </div>
+    
+    <div class="card-footer text-center">
+        <a asp-page="/Heroes/Index" class="btn btn-secondary">Back to Tavern</a>
+    </div>
+</div>

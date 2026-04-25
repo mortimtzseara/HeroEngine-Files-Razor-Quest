@@ -1,10 +1,13 @@
+using HeroEngine.Core.Data;
+using HeroEngine.Core.enums;
+using HeroEngine.Core.Models.Combatants.Heroes;
+using HeroEngine.Core.Models.Spells;
+using HeroEngine.UI;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using System.ComponentModel.DataAnnotations;
-using HeroEngine.Core.Data;
-using HeroEngine.Core.Models.Combatants.Heroes;
-using HeroEngine.UI;
 using System;
+using System.ComponentModel.DataAnnotations;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace HeroEngine.Web.Pages.Heroes
 {
@@ -39,12 +42,24 @@ namespace HeroEngine.Web.Pages.Heroes
             {
                 return Page();
             }
-            AHero newHero = Input.HeroClass switch
+            AHero newHero = null;
+
+            switch (Input.HeroClass)
             {
-                "Warrior" => new Warrior (Input.Name, 1),
-                "Mage" => new Mage (Input.Name, 1),
-                "Rogue" => new Rogue (Input.Name, 1)
-            };
+                case "Warrior":
+                    newHero = new Warrior(Input.Name, 1);
+                    break;
+
+                case "Mage":
+                    var mage = new Mage(Input.Name, 1);
+                    mage.LearnSpell(new AttackSpell("Fireball", TypeRarity.Common, 10, 15));
+                    newHero = mage;
+                    break;
+
+                case "Rogue":
+                    newHero = new Rogue(Input.Name, 1);
+                    break;
+            }
 
             try
             {
