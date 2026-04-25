@@ -118,6 +118,8 @@ namespace HeroEngine.UI
             public const string ErrorReadingJson = "Error reading JSON: {0}";
             public const string HeroAlreadyExists = "A hero with the name '{0}' already exists.";
             public const string ErrorEmptyName = "Name cannot be empty.";
+            public const string ErrorLengthName = "Name must be between 3 and 15 characters.";
+            public const string ErrorEmptyHeroClass = "Hero class must be selected.";
         }
     }
 }
