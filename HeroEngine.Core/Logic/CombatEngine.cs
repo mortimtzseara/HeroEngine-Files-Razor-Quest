@@ -86,7 +86,7 @@ namespace HeroEngine.Core.Logic
             
             File.AppendAllText(UIConfig.Path.TxtPath, BattleLog.ToString());
 
-            var csvWriter = new CsvStatsWriter(UIConfig.Path.CsvPath);
+            var csvWriter = new CsvStatsManager(UIConfig.Path.CsvPath);
             csvWriter.AppendCombatStats(Stats);
         }
         /// <summary>

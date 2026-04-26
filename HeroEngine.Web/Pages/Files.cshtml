@@ -1,0 +1,50 @@
+﻿@page
+@model HeroEngine.Web.Pages.FilesModel
+@{
+    ViewData["Title"] = "File Management";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-4">📂 Kingdom Archives & Config</h2>
+
+    <div class="row">
+        <div class="col-md-7 mb-4">
+            <form method="post" class="card shadow-sm p-4">
+                <h3 class="text-success mb-3">Game Configuration (XML)</h3>
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label class="form-label">Level Multiplier</label>
+                        <input asp-for="Config.LevelMultiplier" class="form-control" type="number" step="0.01" />
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Critical Hit Chance</label>
+                        <input asp-for="Config.CriticalHitChance" class="form-control" type="number" step="0.01" />
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Max Combat Rounds</label>
+                        <input asp-for="Config.MaxCombatRounds" class="form-control" type="number" />
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Max Heroes per Battle</label>
+                        <input asp-for="Config.MaxHeroesPerBattle" class="form-control" type="number" />
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <button type="submit" class="btn btn-success w-100">💾 Save Configuration</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="col-md-5 mb-4">
+            <div class="card shadow-sm p-4 h-100">
+                <h3 class="text-primary mb-3">Data Export</h3>
+                <p class="text-muted">Download the full combat history in CSV format for external analysis.</p>
+                <div class="mt-auto">
+                    <a asp-page-handler="DownloadCsv" class="btn btn-outline-primary btn-lg w-100">
+                        📥 Download Combat CSV
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

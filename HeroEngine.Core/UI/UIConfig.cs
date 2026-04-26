@@ -113,6 +113,7 @@ namespace HeroEngine.UI
         {
             public const string TxtPath = "Data/combat_log.txt";
             public const string CsvPath = "Data/combat_stats.csv";
+            public const string XmlPath = "Data/game_config.xml";
         }
         public static class Exceptions
         {
@@ -126,6 +127,7 @@ namespace HeroEngine.UI
             public const string ErrorInvalidLevel = "Level must be between 1 and 100.";
             public const string NoHeroesAvailable = "No heroes available. Please create a hero first.";
             public const string NoEnemiesAvailable = "No enemies added. Please add at least one enemy to start the battle.";
+            public const string NoPathForConfig = "No path provided for game configuration.";
         }
     }
 }
