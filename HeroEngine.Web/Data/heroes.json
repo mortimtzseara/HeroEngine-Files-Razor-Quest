@@ -1,28 +1,52 @@
 [
   {
     "type": "Mage",
-    "Arcane": 2,
-    "Initiative": 12,
-    "MaxMana": 25,
-    "Mana": 25,
+    "Arcane": 13,
+    "Initiative": 28,
+    "MaxMana": 80,
+    "Mana": 80,
     "SpellBook": [
       {
         "$type": "AttackSpell",
-        "Damage": 15,
-        "Name": "Fireball",
+        "Damage": 95,
+        "Name": "Thunder Smash",
         "Type": "Attack",
+        "Rarity": "Legendary",
+        "ManaCost": 40
+      },
+      {
+        "$type": "DefenseSpell",
+        "ArmorBonus": 10,
+        "Name": "Iron Fortress",
+        "Type": "Defense",
+        "Rarity": "Epic",
+        "ManaCost": 25
+      },
+      {
+        "$type": "SupportSpell",
+        "DamageBonus": 2,
+        "Name": "War Taunt",
+        "Type": "Support",
         "Rarity": "Common",
-        "ManaCost": 10
+        "ManaCost": 5
+      },
+      {
+        "$type": "HealingSpell",
+        "HealAmount": 25,
+        "Name": "Second Wind",
+        "Type": "Healing",
+        "Rarity": "Rare",
+        "ManaCost": 15
       }
     ],
-    "Level": 1,
-    "Name": "Miau",
-    "MaxHP": 100,
+    "Level": 12,
+    "Name": "mamau",
+    "MaxHP": 210,
     "DamageModifier": 0,
     "ArmorModifier": 0,
     "TotalArmor": 0,
-    "TotalDamage": 5,
-    "CurrentHP": 100,
+    "TotalDamage": 16,
+    "CurrentHP": 210,
     "IsDefeated": false,
     "LastDamageDealt": 0
   }

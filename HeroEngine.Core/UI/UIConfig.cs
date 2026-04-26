@@ -67,7 +67,7 @@ namespace HeroEngine.UI
                     Fastest Defeat: {3} (in {4} turns)
                     -------------------------
         """;
-            public const string LogHeader = "=== COMBAT LOG {0} ===\n";
+            public const string LogHeader = "=== COMBAT LOG ===\nDATE: {0}\nHEROES: {1}\nENEMIES: {2}";
         }
         public static class Numeric
         {
@@ -107,6 +107,7 @@ namespace HeroEngine.UI
             ==================================================
             """;
             public const string PrepareForBattle = "--- PREPARE FOR BATTLE ---";
+            public const string EndMark = "========================================";
         }
         public static class Path
         {
@@ -122,6 +123,9 @@ namespace HeroEngine.UI
             public const string ErrorEmptyName = "Name cannot be empty.";
             public const string ErrorLengthName = "Name must be between 3 and 15 characters.";
             public const string ErrorEmptyHeroClass = "Hero class must be selected.";
+            public const string ErrorInvalidLevel = "Level must be between 1 and 100.";
+            public const string NoHeroesAvailable = "No heroes available. Please create a hero first.";
+            public const string NoEnemiesAvailable = "No enemies added. Please add at least one enemy to start the battle.";
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using HeroEngine.Core.Models.Combatants;
+﻿using HeroEngine.Core.Data;
+using HeroEngine.Core.Models.Combatants;
 using HeroEngine.UI;
 using System.Text;
 
@@ -32,7 +33,7 @@ namespace HeroEngine.Core.Logic
         /// </summary>
         public void RunBattle()
         {
-            BattleLog.AppendLine(UIConfig.Messages.LogHeader);
+            BattleLog.AppendLine(string.Format(UIConfig.Messages.LogHeader, Stats.CombatDate, string.Join(", ", Stats.HeroNames), string.Join(", ", Stats.EnemyNames)));
 
             while (Heroes.Any(h => !h.IsDefeated) && Enemies.Any(e => !e.IsDefeated))
             {
@@ -64,8 +65,6 @@ namespace HeroEngine.Core.Logic
                 }
             }
 
-            BattleLog.AppendLine(Stats.GetSummary());
-
             FinalizeBattle();
         }
         /// <summary>
@@ -76,14 +75,19 @@ namespace HeroEngine.Core.Logic
         {
             bool heroesWon = Heroes.Any(h => !h.IsDefeated);
             Stats.Outcome = heroesWon ? UIConfig.Messages.MessageVictory : UIConfig.Messages.MessageDefeat;
+
             BattleLog.AppendLine(Stats.Outcome);
+            BattleLog.AppendLine(UIConfig.Decoration.EndMark);
             
             foreach (var p in Heroes.Concat(Enemies))
             {
                 p.ResetStats();
             }
-
+            
             File.AppendAllText(UIConfig.Path.TxtPath, BattleLog.ToString());
+
+            var csvWriter = new CsvStatsWriter(UIConfig.Path.CsvPath);
+            csvWriter.AppendCombatStats(Stats);
         }
         /// <summary>
         /// Finds the first undefeated enemy combatant in the queue relative to the specified participant.

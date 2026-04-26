@@ -12,9 +12,14 @@
         <form method="post">
             
             <div class="mb-3">
-                <label asp-for="Input.Name" class="form-label">Nombre del Héroe</label>
-                <input asp-for="Input.Name" class="form-control" placeholder="Ej: Gandalf" />
+                <label asp-for="Input.Name" class="form-label">Name</label>
+                <input asp-for="Input.Name" class="form-control" placeholder="Ex: Gandalf" />
                 <span asp-validation-for="Input.Name" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Input.Level" class="form-label">Level</label>
+                <input asp-for="Input.Level" type="number" class="form-control" min="1" max="100" />
+                <span asp-validation-for="Input.Level" class="text-danger"></span>
             </div>
 
             <div class="mb-3">

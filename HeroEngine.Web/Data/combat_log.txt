@@ -1,0 +1,65 @@
+=== COMBAT LOG ===
+DATE: 26/04/2026 12:11:12
+HEROES: mamau
+ENEMIES: Minion 1, Minion 2, Minion 3
+mamau casts Thunder Smash! Minion 1 takes 95 damage.
+Minion 1 is DEFEATED!
+Minion 2 attacks mamau! Takes 5 damage.
+Minion 3 attacks mamau! Takes 5 damage.
+mamau casts Thunder Smash! Minion 2 takes 95 damage.
+Minion 2 is DEFEATED!
+Minion 3 attacks mamau! Takes 5 damage.
+mamau attacks Minion 3! Takes 29 damage.
+Minion 3 attacks mamau! Takes 5 damage.
+mamau attacks Minion 3! Takes 29 damage.
+Minion 3 is DEFEATED!
+VICTORY!
+========================================
+=== COMBAT LOG ===
+DATE: 26/04/2026 12:11:23
+HEROES: mamau
+ENEMIES: Minion 1, Minion 2, Minion 3
+mamau casts Thunder Smash! Minion 1 takes 95 damage.
+Minion 1 is DEFEATED!
+Minion 2 attacks mamau! Takes 5 damage.
+Minion 3 attacks mamau! Takes 5 damage.
+mamau casts Thunder Smash! Minion 2 takes 95 damage.
+Minion 2 is DEFEATED!
+Minion 3 attacks mamau! Takes 5 damage.
+mamau attacks Minion 3! Takes 29 damage.
+Minion 3 attacks mamau! Takes 5 damage.
+mamau attacks Minion 3! Takes 29 damage.
+Minion 3 is DEFEATED!
+VICTORY!
+========================================
+=== COMBAT LOG ===
+DATE: 26/04/2026 12:11:27
+HEROES: mamau
+ENEMIES: Minion 1, Minion 2, Minion 3, Elite 1, Elite 2, Elite 3, Elite 4
+mamau casts Thunder Smash! Minion 1 takes 95 damage.
+Minion 1 is DEFEATED!
+Minion 2 attacks mamau! Takes 5 damage.
+Minion 3 attacks mamau! Takes 5 damage.
+Elite 1 attacks mamau! Takes 15 damage.
+Elite 2 attacks mamau! Takes 15 damage.
+Elite 3 attacks mamau! Takes 15 damage.
+Elite 4 attacks mamau! Takes 15 damage.
+mamau casts Thunder Smash! Minion 2 takes 95 damage.
+Minion 2 is DEFEATED!
+Minion 3 attacks mamau! Takes 5 damage.
+Elite 1 attacks mamau! Takes 15 damage.
+Elite 2 attacks mamau! Takes 15 damage.
+Elite 3 attacks mamau! Takes 15 damage.
+Elite 4 attacks mamau! Takes 15 damage.
+mamau attacks Minion 3! Takes 29 damage.
+Minion 3 attacks mamau! Takes 5 damage.
+Elite 1 attacks mamau! Takes 15 damage.
+Elite 2 attacks mamau! Takes 15 damage.
+Elite 3 attacks mamau! Takes 15 damage.
+Elite 4 attacks mamau! Takes 15 damage.
+mamau attacks Minion 3! Takes 29 damage.
+Minion 3 is DEFEATED!
+Elite 1 attacks mamau! Takes 15 damage.
+mamau is DEFEATED!
+DEFEAT
+========================================

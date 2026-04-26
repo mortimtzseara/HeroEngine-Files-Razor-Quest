@@ -71,7 +71,7 @@ namespace HeroEngine.Core.Logic
             var mostEffective = DamagePerCombatant.OrderByDescending(x => x.Value).FirstOrDefault();
             int totalRounds = (TotalTurns - 1) / CombatantsCount + 1;
 
-            return string.Format("{0},{1},{2},{3},{4},{5},{6},{7}",
+            return string.Format("{0},{1},{2},{3},{4},{5},{6}{7}",
                 CombatDate,
                 string.Join(";", HeroNames),
                 string.Join(";", EnemyNames),
