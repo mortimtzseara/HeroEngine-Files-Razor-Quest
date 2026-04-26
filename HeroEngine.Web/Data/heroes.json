@@ -49,5 +49,120 @@
     "CurrentHP": 210,
     "IsDefeated": false,
     "LastDamageDealt": 0
+  },
+  {
+    "type": "Warrior",
+    "Armor": 17,
+    "TotalArmor": 17,
+    "Initiative": 20,
+    "BattleCry": "For Bytecroft! My code compiles on the first try!",
+    "Level": 13,
+    "Name": "sfdfsf",
+    "MaxHP": 220,
+    "DamageModifier": 0,
+    "ArmorModifier": 0,
+    "TotalDamage": 17,
+    "CurrentHP": 220,
+    "IsDefeated": false,
+    "LastDamageDealt": 0
+  },
+  {
+    "type": "Rogue",
+    "SneakyDamage": 3.1,
+    "HiddenDaggers": 1,
+    "Initiative": 47,
+    "Level": 12,
+    "Name": "sdfsdfsd",
+    "MaxHP": 210,
+    "DamageModifier": 0,
+    "ArmorModifier": 0,
+    "TotalArmor": 0,
+    "TotalDamage": 16,
+    "CurrentHP": 210,
+    "IsDefeated": false,
+    "LastDamageDealt": 0
+  },
+  {
+    "type": "Warrior",
+    "Armor": 15,
+    "TotalArmor": 15,
+    "Initiative": 18,
+    "BattleCry": "For Bytecroft! My code compiles on the first try!",
+    "Level": 11,
+    "Name": "Akukamareareare",
+    "MaxHP": 200,
+    "DamageModifier": 0,
+    "ArmorModifier": 0,
+    "TotalDamage": 15,
+    "CurrentHP": 200,
+    "IsDefeated": false,
+    "LastDamageDealt": 0
+  },
+  {
+    "type": "Mage",
+    "Arcane": 10,
+    "Initiative": 24,
+    "MaxMana": 65,
+    "Mana": 65,
+    "SpellBook": [
+      {
+        "$type": "AttackSpell",
+        "Damage": 95,
+        "Name": "Thunder Smash",
+        "Type": "Attack",
+        "Rarity": "Legendary",
+        "ManaCost": 40
+      },
+      {
+        "$type": "DefenseSpell",
+        "ArmorBonus": 10,
+        "Name": "Iron Fortress",
+        "Type": "Defense",
+        "Rarity": "Epic",
+        "ManaCost": 25
+      },
+      {
+        "$type": "SupportSpell",
+        "DamageBonus": 2,
+        "Name": "War Taunt",
+        "Type": "Support",
+        "Rarity": "Common",
+        "ManaCost": 5
+      },
+      {
+        "$type": "HealingSpell",
+        "HealAmount": 25,
+        "Name": "Second Wind",
+        "Type": "Healing",
+        "Rarity": "Rare",
+        "ManaCost": 15
+      }
+    ],
+    "Level": 9,
+    "Name": "asfsdf",
+    "MaxHP": 180,
+    "DamageModifier": 0,
+    "ArmorModifier": 0,
+    "TotalArmor": 0,
+    "TotalDamage": 13,
+    "CurrentHP": 180,
+    "IsDefeated": false,
+    "LastDamageDealt": 0
+  },
+  {
+    "type": "Rogue",
+    "SneakyDamage": 4.5,
+    "HiddenDaggers": 1,
+    "Initiative": 89,
+    "Level": 26,
+    "Name": "gandalf",
+    "MaxHP": 350,
+    "DamageModifier": 0,
+    "ArmorModifier": 0,
+    "TotalArmor": 0,
+    "TotalDamage": 30,
+    "CurrentHP": 350,
+    "IsDefeated": false,
+    "LastDamageDealt": 0
   }
 ]

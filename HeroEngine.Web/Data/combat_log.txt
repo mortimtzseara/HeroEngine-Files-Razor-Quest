@@ -63,3 +63,98 @@ Elite 1 attacks mamau! Takes 15 damage.
 mamau is DEFEATED!
 DEFEAT
 ========================================
+=== COMBAT LOG ===
+DATE: 26/04/2026 12:40:00
+HEROES: mamau, sfdfsf, sdfsdfsd, Akukamareareare, asfsdf, gandalf
+ENEMIES: Minion 1, Minion 2, Minion 3, Minion 4, Minion 5, Minion 6, Minion 7, Minion 8, Minion 9, Minion 10, Elite 1, Elite 2, Elite 3, Elite 4, Elite 5, Boss 1, Boss 2
+gandalf attacks Boss 1! Takes 135 damage.
+sdfsdfsd attacks Boss 1! Takes 49 damage.
+mamau casts Thunder Smash! Boss 1 takes 95 damage.
+Boss 1 is DEFEATED!
+asfsdf casts Thunder Smash! Boss 2 takes 95 damage.
+sfdfsf attacks Boss 2! Takes 51 damage.
+Akukamareareare attacks Boss 2! Takes 45 damage.
+Boss 2 attacks gandalf! Takes 40 damage.
+Minion 1 attacks gandalf! Takes 5 damage.
+Minion 2 attacks gandalf! Takes 5 damage.
+Minion 3 attacks gandalf! Takes 5 damage.
+Minion 4 attacks gandalf! Takes 5 damage.
+Minion 5 attacks gandalf! Takes 5 damage.
+Minion 6 attacks gandalf! Takes 5 damage.
+Minion 7 attacks gandalf! Takes 5 damage.
+Minion 8 attacks gandalf! Takes 5 damage.
+Minion 9 attacks gandalf! Takes 5 damage.
+Minion 10 attacks gandalf! Takes 5 damage.
+Elite 1 attacks gandalf! Takes 15 damage.
+Elite 2 attacks gandalf! Takes 15 damage.
+Elite 3 attacks gandalf! Takes 15 damage.
+Elite 4 attacks gandalf! Takes 15 damage.
+Elite 5 attacks gandalf! Takes 15 damage.
+gandalf attacks Boss 2! Takes 135 damage.
+Boss 2 is DEFEATED!
+sdfsdfsd attacks Minion 1! Takes 49 damage.
+Minion 1 is DEFEATED!
+mamau casts Thunder Smash! Minion 2 takes 95 damage.
+Minion 2 is DEFEATED!
+asfsdf casts Iron Fortress! Armor increased by 10.
+sfdfsf attacks Minion 3! Takes 51 damage.
+Minion 3 is DEFEATED!
+Akukamareareare attacks Minion 4! Takes 45 damage.
+Minion 4 is DEFEATED!
+Minion 5 attacks gandalf! Takes 5 damage.
+Minion 6 attacks gandalf! Takes 5 damage.
+Minion 7 attacks gandalf! Takes 5 damage.
+Minion 8 attacks gandalf! Takes 5 damage.
+Minion 9 attacks gandalf! Takes 5 damage.
+Minion 10 attacks gandalf! Takes 5 damage.
+Elite 1 attacks gandalf! Takes 15 damage.
+Elite 2 attacks gandalf! Takes 15 damage.
+Elite 3 attacks gandalf! Takes 15 damage.
+Elite 4 attacks gandalf! Takes 15 damage.
+Elite 5 attacks gandalf! Takes 15 damage.
+gandalf attacks Minion 5! Takes 135 damage.
+Minion 5 is DEFEATED!
+sdfsdfsd attacks Minion 6! Takes 49 damage.
+Minion 6 is DEFEATED!
+mamau attacks Minion 7! Takes 29 damage.
+asfsdf attacks Minion 7! Takes 23 damage.
+Minion 7 is DEFEATED!
+sfdfsf attacks Minion 8! Takes 51 damage.
+Minion 8 is DEFEATED!
+Akukamareareare attacks Minion 9! Takes 45 damage.
+Minion 9 is DEFEATED!
+Minion 10 attacks gandalf! Takes 5 damage.
+Elite 1 attacks gandalf! Takes 15 damage.
+Elite 2 attacks gandalf! Takes 15 damage.
+Elite 3 attacks gandalf! Takes 15 damage.
+Elite 4 attacks gandalf! Takes 15 damage.
+Elite 5 attacks gandalf! Takes 15 damage.
+gandalf is DEFEATED!
+sdfsdfsd attacks Minion 10! Takes 49 damage.
+Minion 10 is DEFEATED!
+mamau attacks Elite 1! Takes 29 damage.
+asfsdf attacks Elite 1! Takes 23 damage.
+sfdfsf attacks Elite 1! Takes 51 damage.
+Elite 1 is DEFEATED!
+Akukamareareare attacks Elite 2! Takes 45 damage.
+Elite 2 attacks sdfsdfsd! Takes 15 damage.
+Elite 3 attacks sdfsdfsd! Takes 15 damage.
+Elite 4 attacks sdfsdfsd! Takes 15 damage.
+Elite 5 attacks sdfsdfsd! Takes 15 damage.
+sdfsdfsd attacks Elite 2! Takes 49 damage.
+Elite 2 is DEFEATED!
+mamau attacks Elite 3! Takes 29 damage.
+asfsdf attacks Elite 3! Takes 23 damage.
+sfdfsf attacks Elite 3! Takes 51 damage.
+Elite 3 is DEFEATED!
+Akukamareareare attacks Elite 4! Takes 45 damage.
+Elite 4 attacks sdfsdfsd! Takes 15 damage.
+Elite 5 attacks sdfsdfsd! Takes 15 damage.
+sdfsdfsd attacks Elite 4! Takes 49 damage.
+Elite 4 is DEFEATED!
+mamau attacks Elite 5! Takes 29 damage.
+asfsdf attacks Elite 5! Takes 23 damage.
+sfdfsf attacks Elite 5! Takes 51 damage.
+Elite 5 is DEFEATED!
+VICTORY!
+========================================
