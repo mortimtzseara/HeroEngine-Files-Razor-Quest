@@ -158,3 +158,56 @@ sfdfsf attacks Elite 5! Takes 51 damage.
 Elite 5 is DEFEATED!
 VICTORY!
 ========================================
+=== COMBAT LOG ===
+DATE: 26/04/2026 21:38:06
+HEROES: mamau, sfdfsf, sdfsdfsd, Akukamareareare, asfsdf, gandalf
+ENEMIES: Minion 1, Minion 2, Minion 3, Elite 1, Elite 2, Boss 1
+gandalf attacks Boss 1! Takes 135 damage.
+sdfsdfsd attacks Boss 1! Takes 49 damage.
+mamau casts Thunder Smash! Boss 1 takes 95 damage.
+Boss 1 is DEFEATED!
+asfsdf casts Thunder Smash! Minion 1 takes 95 damage.
+Minion 1 is DEFEATED!
+sfdfsf attacks Minion 2! Takes 51 damage.
+Minion 2 is DEFEATED!
+Akukamareareare attacks Minion 3! Takes 45 damage.
+Minion 3 is DEFEATED!
+Elite 1 attacks gandalf! Takes 15 damage.
+Elite 2 attacks gandalf! Takes 15 damage.
+gandalf attacks Elite 1! Takes 135 damage.
+Elite 1 is DEFEATED!
+sdfsdfsd attacks Elite 2! Takes 49 damage.
+mamau casts Thunder Smash! Elite 2 takes 95 damage.
+Elite 2 is DEFEATED!
+VICTORY!
+========================================
+=== COMBAT LOG ===
+DATE: 26/04/2026 21:38:11
+HEROES: mamau, sfdfsf, sdfsdfsd, Akukamareareare, asfsdf, gandalf
+ENEMIES: Minion 1, Minion 2, Minion 3, Minion 4, Minion 5, Elite 1, Elite 2, Boss 1
+gandalf attacks Boss 1! Takes 135 damage.
+sdfsdfsd attacks Boss 1! Takes 49 damage.
+mamau casts Thunder Smash! Boss 1 takes 95 damage.
+Boss 1 is DEFEATED!
+asfsdf casts Thunder Smash! Minion 1 takes 95 damage.
+Minion 1 is DEFEATED!
+sfdfsf attacks Minion 2! Takes 51 damage.
+Minion 2 is DEFEATED!
+Akukamareareare attacks Minion 3! Takes 45 damage.
+Minion 3 is DEFEATED!
+Minion 4 attacks gandalf! Takes 5 damage.
+Minion 5 attacks gandalf! Takes 5 damage.
+Elite 1 attacks gandalf! Takes 15 damage.
+Elite 2 attacks gandalf! Takes 15 damage.
+gandalf attacks Minion 4! Takes 135 damage.
+Minion 4 is DEFEATED!
+sdfsdfsd attacks Minion 5! Takes 49 damage.
+Minion 5 is DEFEATED!
+mamau casts Thunder Smash! Elite 1 takes 95 damage.
+Elite 1 is DEFEATED!
+asfsdf casts Iron Fortress! Armor increased by 10.
+sfdfsf attacks Elite 2! Takes 51 damage.
+Akukamareareare attacks Elite 2! Takes 45 damage.
+Elite 2 is DEFEATED!
+VICTORY!
+========================================

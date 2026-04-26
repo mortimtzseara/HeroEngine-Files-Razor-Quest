@@ -15,19 +15,13 @@ namespace HeroEngine.Web.Pages.Heroes
         {
             _heroRepository = heroRepository;
         }
-
-        /// <summary>
-        /// This method runs when the page is requested.
-        /// ASP.NET automatically injects the 'name' from the URL.
-        /// </summary>
         public IActionResult OnGet(string name)
         {
-            if (string.IsNullOrWhiteSpace(name)) RedirectToPage("/Heroes/Index");
+            if (string.IsNullOrWhiteSpace(name)) return RedirectToPage("/Heroes/Index");
 
             Hero = _heroRepository.GetHeroByName(name);
 
-            if (Hero == null) RedirectToPage("/Heroes/Index");
-
+            if (Hero == null) return RedirectToPage("/Heroes/Index");
             return Page();
         }
     }
